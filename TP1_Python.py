@@ -51,3 +51,5 @@ def multiplication(A,B):
             for k in range(len(A[0])):
                 C[i][j]+=(A[i][k]*B[k][j])
     return C
+
+
