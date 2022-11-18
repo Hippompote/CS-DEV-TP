@@ -35,6 +35,19 @@ def mesImpots(revenu):
     else:
         return((revenu-tranches[3]+1)*0.44 + (tranches[3]-tranches[2])*0.41 + (tranches[2]-tranches[1])*0.3 + (tranches[1]-tranches[0])*0.11)
 
-impots = int(input("Entrez votre revenu en €: "))
+'''impots = int(input("Entrez votre revenu en €: "))
 
-print(mesImpots(impots))
+print(mesImpots(impots))'''
+
+import numpy as np
+
+
+
+def multiplication(A,B):
+    C = [[0 for k in range(len(A[0]))] for k in range(len(B))] 
+    for i in range(len(A)):
+        for j in range(len(B)):
+
+            for k in range(len(A[0])):
+                C[i][j]+=(A[i][k]*B[k][j])
+    return C
