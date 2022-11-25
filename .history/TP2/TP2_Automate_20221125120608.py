@@ -1,11 +1,3 @@
-'''
-Salmon Hippolyte & Lisée Jérôme
-TP2 - CS DEV Automate de vérification syntaxique fonctionnel à saisie protégée
-Aidés par Louis Robert et Charles Arbaud sur la compréhension syntaxique et l'utilisation du module re
-'''
-
-
-
 import re
 
 dictionnaire ={"le" : 0, "la" : 0, "chat" : 2, "souris" : 2, "martin" : 4,
