@@ -1,12 +1,21 @@
 from random import randint
-
+from tkinter import Tk, Label,Button,StringVar,Entry,Canvas
 mots = open('./TP3/Mots.txt','r')
-<<<<<<< Updated upstream
-lstMots = mots.read()
-print(lstMots)
-=======
 
+fen = Tk()
+fen.title('Jeu du pendu')
+fen.geometry('1280x720')
+fen.configure(bg = 'gray')
+hangCanvas = Canvas(fen)
+l = Label(fen, text="Entrez une lettre")
+l.pack(side = 'left')
 
+e = Entry(fen, bd = 5)
+e.pack(side = 'left')
+
+Valider = Button(fen, text='Valider')
+Valider.pack(side='left')
+fen.mainloop()
 
 def randWord(liste):
     str = liste.read()
@@ -53,13 +62,13 @@ def pendu(mot):
         print('Nombre de chances restantes:', life)
         print('Lettres déjà essayées:', triedLetters)
         
-    '''if isWin(guessWord) == True:
+    if isWin(guessWord) == True:
         print('Victoire !')
-        playAgain = input('Voulez vous rejouer ? (o = oui; n = non)')
+        '''playAgain = input('Voulez vous rejouer ? (o = oui; n = non)')
         if playAgain == 'o':
             pendu(randWord(mots))
         else:
             return
 '''
 pendu(randWord(mots))
->>>>>>> Stashed changes
+
