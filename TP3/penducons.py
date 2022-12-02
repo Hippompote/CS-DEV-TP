@@ -1,18 +1,18 @@
 from random import randint
 
 
-def randWord(liste):
+def randWord(liste): #Fonction qui séléctionne un mot aléatoire dans la liste de mots
     str = liste.read()
     lstMots = str.split(' ')
     return(lstMots[randint(0,len(lstMots)-1)])
 
-def isWin(word):
+def isWin(word): #Fonction de gestion de la condition de victoire
     Victoire = False
     if '_' not in word:
         Victoire = True
     return Victoire
 
-def pendu(mot):
+def pendu(mot): #Fonction principale qui gère le pendu
     life = 8
     print(mot)
     guessWord  = mot[0]
@@ -20,7 +20,7 @@ def pendu(mot):
         guessWord += '_'
     print(guessWord)
 
-    triedLetters = []
+    triedLetters = [] #Liste des lettres déjà essayées
     while '_' in guessWord:
         guess = input('Proposez une lettre:')
         if guess in triedLetters:
