@@ -1,21 +1,5 @@
 from random import randint
-from tkinter import Tk, Label,Button,StringVar,Entry,Canvas
-mots = open('./TP3/Mots.txt','r')
 
-fen = Tk()
-fen.title('Jeu du pendu')
-fen.geometry('1280x720')
-fen.configure(bg = 'gray')
-hangCanvas = Canvas(fen)
-l = Label(fen, text="Entrez une lettre")
-l.pack(side = 'left')
-
-e = Entry(fen, bd = 5)
-e.pack(side = 'left')
-
-Valider = Button(fen, text='Valider')
-Valider.pack(side='left')
-fen.mainloop()
 
 def randWord(liste):
     str = liste.read()
@@ -70,5 +54,4 @@ def pendu(mot):
         else:
             return
 '''
-pendu(randWord(mots))
 
