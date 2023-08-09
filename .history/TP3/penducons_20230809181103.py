@@ -1,6 +1,6 @@
 from random import randint
 
-mots = open('./TP3/Mots.txt','r')
+mots = open('../TP3/Mots.txt','r')
 
 
 

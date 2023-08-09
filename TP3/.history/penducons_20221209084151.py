@@ -26,6 +26,7 @@ def playAgain(word):
 
 def pendu(mot):
     life = 8
+    print(mot)
     guessWord  = mot[0]
     for i in range(len(mot)-1):
         guessWord += '_'
